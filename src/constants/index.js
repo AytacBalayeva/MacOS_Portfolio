@@ -396,7 +396,7 @@ const ABOUT_LOCATION = {
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
-      position: "top-10 left-5",
+      position: "top-10 right-110",
       imageUrl: "/images/adrian.jpg",
     },
     {
@@ -405,7 +405,7 @@ const ABOUT_LOCATION = {
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
-      position: "top-28 right-72",
+      position: "top-10 right-80",
       imageUrl: "/images/adrian-2.jpg",
     },
     {
@@ -414,7 +414,7 @@ const ABOUT_LOCATION = {
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
-      position: "top-52 left-80",
+      position: "top-10 right-40",
       imageUrl: "/images/adrian-3.jpeg",
     },
     {
@@ -423,7 +423,7 @@ const ABOUT_LOCATION = {
       icon: "/images/txt.png",
       kind: "file",
       fileType: "txt",
-      position: "top-60 left-5",
+      position: "top-10 left-100",
       subtitle: "Meet the Developer Behind the Code",
       image: "/images/adrian.jpg",
       description: [
