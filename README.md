@@ -1,16 +1,85 @@
-# React + Vite
+<h1 align="center">🖥️ macOS-Inspired Developer Portfolio</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  A portfolio that feels like an operating system — not just a website.
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="https://somrajxportfolio.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Live Demo-Explore it like a Mac-blue?style=for-the-badge" alt="Live Demo" />
+  </a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Portfolio Preview](screenshot.png)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> *"Explore it like a Mac."*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+## 🏗️ Architecture
+
+I didn't design this as a typical website — I treated it like a **mini operating system**.
+
+| Concept | Implementation |
+|---------|---------------|
+| Apps | React components |
+| Windows | Reusable window wrappers |
+| Finder | Data-driven file system |
+| Dock | App launcher |
+| State | Zustand window management |
+
+---
+
+## ✨ Features
+
+- 📁 **Finder** — Browse projects like a real file explorer, powered by structured data objects
+- 🪟 **Window Management** — Draggable, focusable windows with open/close logic
+- 💻 **Terminal** — Type `skills`, `projects`, or `about` instead of reading a static list
+- 🎨 **Animations** — Subtle GSAP transitions and micro-interactions throughout
+- 📄 **PDF Viewer** — View and download resume directly in the browser
+- 🌗 **Dark / Light / System** theme support
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| React | UI framework |
+| Tailwind CSS | Styling |
+| GSAP | Animations & transitions |
+| Zustand | Global window state |
+| Lucide Icons | Iconography |
+| React-PDF | Resume viewer |
+
+---
+
+## 🚀 Getting Started
+```bash
+# Clone the repository
+git clone https://github.com/your-username/your-repo.git
+
+# Install dependencies
+cd your-repo
+npm install
+
+# Run the app
+npm run dev
+```
+
+---
+
+## 💭 What I Learned
+
+- To think in **systems**, not pages
+- How familiar UX patterns reduce friction
+- How small interactions create delight
+- How frontend architecture scales beyond components
+
+---
+
+
