@@ -1,16 +1,15 @@
 <h1 align="center">🖥️ macOS-Inspired Developer Portfolio</h1>
+<img width="1584" height="769" alt="image" src="https://github.com/user-attachments/assets/d3063035-bd61-4bc6-96ab-baf662dcfda5" />
 
 <p align="center">
   A portfolio that feels like an operating system — not just a website.
 </p>
 
 <p align="center">
-  <a href="https://somrajxportfolio.vercel.app/" target="_blank">
+  <a href="https://mac-os-portfolio-alpha-seven.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/Live Demo-Explore it like a Mac-blue?style=for-the-badge" alt="Live Demo" />
   </a>
 </p>
-
-![Portfolio Preview](screenshot.png)
 
 ---
 
@@ -79,7 +78,4 @@ npm run dev
 - How familiar UX patterns reduce friction
 - How small interactions create delight
 - How frontend architecture scales beyond components
-
----
-
 
