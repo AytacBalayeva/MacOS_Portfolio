@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 @import "tailwindcss";
-
+@variant dark (&:where(.dark, .dark *));
 html,
 body {
   width: 100dvw;
@@ -37,7 +37,7 @@ body {
   }
 
   nav {
-    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+    @apply flex justify-between items-center bg-white/50 dark:bg-[#1e1e1e80] backdrop-blur-3xl p-2 px-5 dark:text-white select-none;
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
@@ -65,7 +65,15 @@ body {
   .icon {
     @apply p-1 hover:bg-gray-200 rounded hover:cursor-default;
   }
-
+  @media (hover: hover) {
+    .icon:hover {
+      cursor: default;
+      background-color: var(--color-gray-200);
+    }
+    .icon:where(.dark, .dark *):hover {
+      background-color: var(--color-dark-500);
+    }
+  }
   #welcome {
     @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
 
@@ -115,14 +123,14 @@ body {
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400 dark:bg-[#323232] dark:border-[#323232];
   }
 
   #safari {
-    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden dark:bg-[#1e1e1e];
 
     .search {
-      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
+      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2 dark:bg-[#1e1e1e] dark:border-[#1e1e1e];
 
       input {
         @apply placeholder:text-gray-400;
@@ -130,7 +138,7 @@ body {
     }
 
     .blog {
-      @apply bg-white p-10 max-w-3xl mx-auto;
+      @apply bg-white p-10 max-w-3xl mx-auto dark:bg-[#1e1e1e];
 
       h2 {
         @apply text-xl font-bold text-pink-600 mb-10;
@@ -147,11 +155,11 @@ body {
           @apply col-span-10 space-y-3;
 
           p {
-            @apply text-xs text-gray-500;
+            @apply text-xs text-gray-500  dark:text-white;
           }
 
           h3 {
-            @apply font-semibold text-base text-gray-800;
+            @apply font-semibold text-base text-gray-800  dark:text-white;
           }
 
           a {
@@ -163,17 +171,17 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden dark:bg-[#1e1e1e];
 
     h2 {
       @apply font-bold text-sm text-center w-full;
     }
 
     .techstack {
-      @apply text-sm font-roboto p-5;
+      @apply text-sm font-roboto p-5 dark:text-white;
 
       .label {
-        @apply flex items-center ms-10 mt-7;
+        @apply flex items-center ms-10 mt-7 dark:text-white;
       }
 
       .content {
@@ -201,7 +209,7 @@ body {
           @apply flex items-center;
 
           svg {
-            @apply w-5 me-5;
+            @apply w-5 me-5 dark:text-white;
           }
         }
       }
@@ -209,14 +217,14 @@ body {
   }
 
   #contact {
-    @apply max-w-2xl absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply max-w-2xl absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden dark:bg-[#1e1e1e]  dark:text-white;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
     }
 
     h3 {
-      @apply text-xl font-semibold;
+      @apply text-xl font-semibold  dark:text-white;
     }
 
     ul {
@@ -310,21 +318,21 @@ body {
     @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
 
     .sidebar {
-      @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3;
+      @apply w-48 bg-gray-50  border-r border-gray-200 flex flex-col p-5 space-y-3 dark:bg-[#323232] dark:border-[#323232];
 
       h3 {
-        @apply text-xs font-medium text-gray-400 mb-1;
+        @apply text-xs font-medium text-gray-400 mb-1 dark:text-[#ffffff40];
       }
 
       ul {
         @apply space-y-1;
 
         .active {
-          @apply bg-blue-100 text-blue-700;
+          @apply bg-blue-100 text-blue-700 dark:text-white dark:bg-[#ffffff1a];
         }
 
         .not-active {
-          @apply text-gray-700 hover:bg-gray-200;
+          @apply text-gray-700 hover:bg-gray-200 dark:text-white dark:hover:bg-[#ffffff1a];
         }
 
         li {
@@ -334,7 +342,7 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative;
+      @apply flex-1 p-8 bg-white dark:bg-[#1e1e1e] max-w-2xl relative;
 
       li {
         @apply absolute flex items-center flex-col gap-3;
@@ -344,7 +352,7 @@ body {
         }
 
         p {
-          @apply text-sm text-center font-medium w-40;
+          @apply text-sm text-center font-medium w-40 dark:text-white;
         }
       }
     }
@@ -393,4 +401,22 @@ body {
       }
     }
   }
+}
+#theme-switcher {
+  @apply absolute top-10 -right-15 w-30 flex flex-col bg-white/95  dark:text-white dark:bg-[#1e1e1e] px-1.5 pt-1.5 rounded-lg items-start;
+
+  button {
+    @apply flex items-center hover:bg-gray-200 w-full rounded-md p-1.5 dark:hover:bg-[#323232] mb-1.5;
+  }
+
+  .theme-icon {
+    @apply mr-3 w-4.5 h-4.5;
+  }
+  span {
+    @apply text-sm;
+  }
+}
+
+.active-mode {
+  @apply bg-gray-200 dark:bg-[#323232];
 }

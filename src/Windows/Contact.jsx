@@ -1,4 +1,3 @@
-import React from "react";
 import WindowWrapper from "../hoc/WindowWrapper";
 import WindowControls from "../components/WindowControls";
 import { socials } from "../constants";
@@ -12,12 +11,15 @@ const Contact = () => {
       </div>
       <div className="p-5 space-y-5">
         <img
-          src="/images/adrian.jpg"
-          alt="Adrian"
-          className="w-20 rounded-full"
+          src="/images/aytac.jpg"
+          alt="Aytac"
+          className="w-30 rounded-full"
         />
         <h3>Let's connect</h3>
-        <p>Go an idea? A bug to squash? Or just wanna talk tech?I'm in </p>
+        <p>
+          Whether you have a project in mind, an opportunity to share, or just
+          want to geek out over code — I'd love to hear from you.
+        </p>
         <ul>
           {socials.map(({ id, bg, link, icon, text }) => (
             <li key={id} style={{ backgroundColor: bg }}>

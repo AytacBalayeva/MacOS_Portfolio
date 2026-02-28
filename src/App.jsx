@@ -1,6 +1,6 @@
 import gsap from "gsap";
-import { Navbar, Welcome, Dock } from "./components";
-import { Draggable } from "gsap/draggable";
+import { Navbar, Welcome, Dock, Home } from "./components";
+import { Draggable } from "gsap/Draggable";
 import {
   Contact,
   Finder,
@@ -10,9 +10,16 @@ import {
   Terminal,
   Text,
 } from "./Windows";
+import useThemeStore from "./store/theme";
+import { useEffect } from "react";
 
 gsap.registerPlugin(Draggable);
 const App = () => {
+  const { initTheme } = useThemeStore();
+
+  useEffect(() => {
+    initTheme();
+  }, []);
   return (
     <main>
       <Navbar />
@@ -25,6 +32,7 @@ const App = () => {
       <Text />
       <Image />
       <Contact />
+      <Home />
     </main>
   );
 };
