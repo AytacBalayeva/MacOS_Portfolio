@@ -14,7 +14,7 @@ const Image = () => {
         <WindowControlls target="imgfile" />
         <h2>{name}</h2>
       </div>
-      <div className="p-5 bg-white">
+      <div className="p-5 bg-white dark:bg-[#1e1e1e]">
         <img
           src={imageUrl}
           alt={name}
